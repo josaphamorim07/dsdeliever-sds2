@@ -1,7 +1,11 @@
 package com.devsuperior.dsdeliver.services;
 
 import java.util.List;
+
+
 import java.util.stream.Collectors;
+
+import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +22,7 @@ public class ProductService {
 	@Autowired
 	 private ProductRepository repository;
 	
-	
+	@Transactional
 	public List<ProductDTO> findALL() {
 		
 		List<Product> list = repository.findALLByOrderByNameAsc();

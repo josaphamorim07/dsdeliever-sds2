@@ -1,6 +1,8 @@
+
 package com.devsuperior.dsdeliver.dto;
 
 import java.io.Serializable;
+
 
 import com.devsuperior.dsdeliver.entities.Product;
 
@@ -20,7 +22,6 @@ public class ProductDTO implements Serializable {
 	}
 
 public ProductDTO(Long id, String name, Double price, String description, String imageUri) {
-	super();
 	this.id = id;
 	this.name = name;
 	this.price = price;
